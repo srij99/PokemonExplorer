@@ -46,7 +46,8 @@ export default function Home() {
           url: poke.url,
           id: Number(id),
           image: details.data.sprites.front_default, // Default image
-          hoverImage: details.data.sprites.back_default, // Image on hover
+          hoverImage:
+            details.data.sprites.other["official-artwork"].front_default, // Image on hover
           types: details.data.types.map((t: PokemonType) => t.type.name),
         };
       })
